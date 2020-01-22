@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace PingPongArchitecture.Shared.Character2D
 {
-    class CheckForGround2DSystem : ICheckForGround2D
+    public class CheckForGround2DSystem : ICheckForGround2D
     {
         public bool IsOnGround(in Vector2 center, in float distanceBias, in int bitmask)
         {

@@ -1,0 +1,17 @@
+{
+    "name": "PingPongArchitecture.ExampleGame1",
+    "references": [
+        "GUID:c8756575b11705a4d9d185b0a851ae69",
+        "GUID:992312ec278351849ba01c50cb61114a",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

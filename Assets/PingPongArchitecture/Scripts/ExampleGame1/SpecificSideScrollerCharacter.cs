@@ -1,7 +1,8 @@
 ﻿using PingPongArchitecture.Inputs;
 using UnityEngine;
+using PingPongArchitecture.Shared.Character2D;
 
-namespace PingPongArchitecture.Shared.Character2D
+namespace PingPongArchitecture.ExampleGame1
 {
     public class SpecificSideScrollerCharacter : SideScrollerCharacter2DComponent, ICheckForGround2D
     {
