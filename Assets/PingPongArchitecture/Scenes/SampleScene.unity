@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _velocityDampening: 0.01
+  _jumpForce: 6.66
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _velocityDampening: 0.05
+  _jumpForce: 7.08
   _bitmask:
     serializedVersion: 2
     m_Bits: 2048

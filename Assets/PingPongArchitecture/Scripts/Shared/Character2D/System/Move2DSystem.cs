@@ -2,7 +2,7 @@
 
 namespace PingPongArchitecture.Shared.Character2D
 {
-    public class Move2DSystem : IMovable2D
+    public class Move2DSystem : IProcessMove2D
     {
         public void Move(ref Transform transform, in Vector2 vel)
         {

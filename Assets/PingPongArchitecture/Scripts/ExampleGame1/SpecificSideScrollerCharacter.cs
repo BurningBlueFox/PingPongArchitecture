@@ -6,26 +6,26 @@ namespace PingPongArchitecture.ExampleGame1
 {
     public class SpecificSideScrollerCharacter : SideScrollerCharacter2DComponent, ICheckForGround2D
     {
-        protected ICheckForGround2D _iCheckForGround;
+        protected IProcessCheckForGround2D _iProcessCheckForGround;
         [SerializeField] protected LayerMask _bitmask;
         [SerializeField] protected float _groundCheckDistance = 0.7f;
 
-        public virtual bool IsOnGround(in Vector2 center, in float distanceBias, in int bitmask) => _iCheckForGround.IsOnGround(center, distanceBias, bitmask);
+        public virtual bool IsOnGround() => _iProcessCheckForGround.IsOnGround(_transform.position, _groundCheckDistance, _bitmask);
         
         
-        public override void Jump(ref Rigidbody2D rigidbody, in float force, in ForceMode2D forceMode = ForceMode2D.Impulse)
+        public override void Jump()
         {
-            if(IsOnGround(_transform.position, _groundCheckDistance, _bitmask)) base.Jump(ref rigidbody, force, forceMode);
+            if(IsOnGround()) base.Jump();
         }
 
-        public override void Move(ref Transform transform, in Vector2 vel)
+        public override void MoveToPosition(in Vector2 pos)
         {
-            if (IsOnGround(_transform.position, _groundCheckDistance, _bitmask)) base.Move(ref transform, vel);
+            if (IsOnGround()) base.MoveToPosition(pos);
         }
         protected void Start()
         {
             base.Start();
-            _iCheckForGround = _iCheckForGround ?? new CheckForGround2DSystem();
+            _iProcessCheckForGround = _iProcessCheckForGround ?? new CheckForGround2DSystem();
         }
 
     }
