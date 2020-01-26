@@ -10,7 +10,7 @@ namespace PingPongArchitecture.ExampleGame1
         [SerializeField] protected LayerMask _bitmask;
         [SerializeField] protected float _groundCheckDistance = 0.7f;
 
-        public virtual bool IsOnGround() => _iProcessCheckForGround.IsOnGround(_transform.position, _groundCheckDistance, _bitmask);
+        public bool IsOnGround() => _iProcessCheckForGround.IsOnGround(_transform.position, _groundCheckDistance, _bitmask);
         
         
         public override void Jump()

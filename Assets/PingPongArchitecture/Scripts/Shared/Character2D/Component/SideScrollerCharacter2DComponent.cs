@@ -13,9 +13,9 @@ namespace PingPongArchitecture.Shared.Character2D
         protected Rigidbody2D _rigidbody;
         float moveAxis;
 
-        public virtual void Jump() => _iProcessJump.Jump(ref _rigidbody, in _jumpForce, ForceMode2D.Impulse);
+        public virtual void Jump() => _iProcessJump.Jump(ref _rigidbody, in _jumpForce, ForceMode2D.Impulse); //Dont do virtual functions, I've ony did because of the new input system
 
-        protected virtual void SetInputs()
+        protected void SetInputs()
         {
             _inputAction = new SideScroller2DInput_Default();
             _inputAction.Player.Move.Enable();
