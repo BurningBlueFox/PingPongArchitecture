@@ -24,7 +24,7 @@ namespace PingPongArchitecture.Shared.Character2D
             _inputAction.Enable();
         }
 
-        protected void Awake()
+        protected new void Awake()
         {
             base.Awake();
             _rigidbody = GetComponent<Rigidbody2D>();
@@ -35,9 +35,9 @@ namespace PingPongArchitecture.Shared.Character2D
             moveAxis = _inputAction.Player.Move.ReadValue<float>() * _velocityDampening;
             MoveToPosition(new Vector2(moveAxis, _transform.position.y));
         }
-        protected void Start()
+        protected new void Start()
         {
-            _iProcessMove = _iProcessMove ?? new Move2DSystem();
+            base.Start();
             _iProcessJump = _iProcessJump ?? new Jump2DSystem();
         }
 

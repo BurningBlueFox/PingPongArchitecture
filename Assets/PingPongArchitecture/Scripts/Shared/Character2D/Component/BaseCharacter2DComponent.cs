@@ -8,10 +8,14 @@ namespace PingPongArchitecture.Shared.Character2D
         [SerializeField]
         protected IProcessMove2D _iProcessMove;
 
-        public virtual void MoveToPosition(in Vector2 pos) => _iProcessMove.Move(ref _transform, in pos);
+        public void MoveToPosition(in Vector2 pos) => _iProcessMove.Move(ref _transform, in pos);
         protected void Awake()
         {
             _transform = this.transform;
+        }
+        protected void Start()
+        {
+            _iProcessMove = _iProcessMove ?? new Move2DSystem();
         }
     }
 }

@@ -18,11 +18,13 @@ namespace PingPongArchitecture.ExampleGame1
             if(IsOnGround()) base.Jump();
         }
 
-        public override void MoveToPosition(in Vector2 pos)
+        public new void MoveToPosition(in Vector2 pos)
         {
             if (IsOnGround()) base.MoveToPosition(pos);
+
+            Debug.Log("Calling from specificCharacterController");
         }
-        protected void Start()
+        protected new void Start()
         {
             base.Start();
             _iProcessCheckForGround = _iProcessCheckForGround ?? new CheckForGround2DSystem();
